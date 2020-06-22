@@ -33,7 +33,7 @@ while True:
 	# grab the frame from the threaded video stream and resize it
 	# to have a maximum width of 400 pixels
 	frame = vs.read()
-	frame = imutils.resize(frame, width=400)
+	frame = imutils.resize(frame, width=800)
 
 	# grab the frame dimensions and convert it to a blob
 	(h, w) = frame.shape[:2]
@@ -81,3 +81,5 @@ while True:
 # do a bit of cleanup
 cv2.destroyAllWindows()
 vs.stop()
+
+#python detect_faces_video.py --prototxt deploy.prototxt.txt --model res10_300x300_ssd_iter_140000.caffemodel
